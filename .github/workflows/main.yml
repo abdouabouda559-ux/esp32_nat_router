@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Build ESP-IDF Project
         uses: espressif/esp-idf-ci-action@v1
@@ -17,7 +17,7 @@ jobs:
           target: esp32
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: firmware_esp32
           path: build/*.bin
